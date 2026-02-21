@@ -61,7 +61,7 @@ class ArrayList {
         }
 
         E remove() {
-                if (marker < 0 and marker > count) {
+                if (marker < 0 or marker >= count) {
                         cout << "Invalid operation, marker reset" << endl;
                         marker = 0;
                         return E();
@@ -77,7 +77,7 @@ class ArrayList {
         }
 
         E get() {
-                if (marker < 0 and marker > count) {
+                if (marker < 0 or marker >= count) {
                         cout << "Invalid operation, marker reset" << endl;
                         marker = 0;
                         return E();
@@ -94,6 +94,7 @@ class ArrayList {
                 cout << "Count: " << count << ", Slots: " << slots << ", Marker: " << marker << endl;
         }
 };
+
 
 
 int main() {
